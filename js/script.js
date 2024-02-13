@@ -1,12 +1,12 @@
 // triangle
 function inputSubmitBtnTriangle() {
   const triangleBaseInput = document.getElementById("triangle-base");
-  const triangleBaseInputValue = triangleBaseInput.value;
-  const newTriangleBaseInputValue = parseFloat(triangleBaseInputValue);
-  triangleBaseInput.value = " ";
   const triangleHeightInput = document.getElementById("triangle-height");
+  const triangleBaseInputValue = triangleBaseInput.value;
   const triangleHeightInputValue = triangleHeightInput.value;
+  const newTriangleBaseInputValue = parseFloat(triangleBaseInputValue);
   const newTriangleHeightInputValue = parseFloat(triangleHeightInputValue);
+  triangleBaseInput.value = " ";
   triangleHeightInput.value = " ";
   let area = 0.5 * newTriangleBaseInputValue * newTriangleHeightInputValue;
   area = parseFloat(area.toFixed(3));
@@ -15,6 +15,8 @@ function inputSubmitBtnTriangle() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `Triangle Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 // triangle hover effect
@@ -45,6 +47,8 @@ function inputSubmitBtnRectangle() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `Rectangle Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 
@@ -82,6 +86,8 @@ function inputSubmitBtnParallelogram() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `parallelogram Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 
@@ -113,6 +119,8 @@ function inputSubmitBtnRhombus() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `Rhombus Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 // Rhombus hover effect
@@ -142,6 +150,8 @@ function inputSubmitBtnPentagon() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `Pentagon Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 // pentagon hover effect
@@ -175,6 +185,8 @@ function inputSubmitBtnEllipse() {
   const calculationShow = document.getElementById('calculation-show');
   const p = document.createElement('p');
   p.innerText = `Ellipse Area ${area} cm2`;
+  p.classList.add('pera');
+  p.style.fontSize = "20px";
   calculationShow.appendChild(p);
 }
 
@@ -190,26 +202,30 @@ document.getElementById('ellipse-card').addEventListener('mouseout', function(){
 })
 
 
-// reuse function
-// function inputSubmitBtn(){
-//     const triangleBase = inputField('triangle-base');
-//     const triangleHeight = inputField('triangle-height');
-//     let area = 0.5 * triangleBase * triangleHeight;
-//     area = parseFloat(area.toFixed(3));
-//     innerTextValue('inner-text' , area);
+// re-use function
+// function inputSubmitBtnTriangle(){
+//    const triangleBase  = inputGetElementId("triangle-base");
+//    const triangleHeight  = inputGetElementId("triangle-height");
+//    const area = 0.5 * triangleBase * triangleHeight;
+//    setInnerTextId('inner-text-triangle', area);
+//    const calculationShow = document.getElementById("calculation-show");
+//   const p = document.createElement('p');
+//   p.innerText = `Triangle Area ${area} cm2`;
+//   calculationShow.appendChild(p);
+
+
 // }
 
-// function inputField(elementInputId){
-//   const inputField = document.getElementById(elementInputId);
-//   const inputValueText = inputField.value;
-//   const value = parseFloat(inputValueText);
-//   inputField.value = " "
+// function inputGetElementId(inputId){
+//   const inputFieldId = document.getElementById(inputId);
+//   const inputValue = inputFieldId.value;
+//   const value = parseFloat(inputValue);
+//   inputFieldId.value = " ";
 //   return value;
-
 // }
 
-// function innerTextValue (elementId, area){
-//     const text = document.getElementById(elementId);
-//     text.innerText = area;
+// function setInnerTextId (elementId, area){
+//   const innerTextId = document.getElementById(elementId);
+//   innerTextId.innerText = area;
 
 // }
